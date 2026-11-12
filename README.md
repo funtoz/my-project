@@ -1,2 +1,1 @@
-# my-project
-Репозиторий для моих проектов
+# Telegram bot video uniqualizer
