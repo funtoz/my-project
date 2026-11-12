@@ -1,0 +1,39 @@
+﻿# Инструкция по установке и запуску бота
+
+## Шаг 1: Проверь Python
+
+python --version
+# Должна быть версия 3.9 или выше
+# Если Python не установлен, скачай с https://www.python.org/downloads/
+
+## Шаг 2: Проверь FFmpeg
+
+ffmpeg -version
+# Если не установлен:
+# 1. Скачай: https://www.gyan.dev/ffmpeg/builds/ffmpeg-release-essentials.zip
+# 2. Распакуй в C:\ffmpeg
+# 3. Добавь в PATH: C:\ffmpeg\bin
+
+## Шаг 3: Установи зависимости
+
+cd E:\Work\video-uniqualizer-bot
+pip install -r requirements.txt
+
+## Шаг 4: Создай бота в Telegram
+
+# 1. Открой @BotFather в Telegram
+# 2. Отправь: /newbot
+# 3. Придумай имя и username
+# 4. Скопируй токен
+
+## Шаг 5: Настрой конфигурацию
+
+Copy-Item .env.example .env
+# Открой .env и вставь свой токен
+
+## Шаг 6: Запусти бота
+
+python main.py
+
+# Если всё работает, увидишь:
+# INFO - Бот успешно запущен и готов к работе!

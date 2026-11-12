@@ -1,0 +1,1381 @@
+2026-11-07 17:16:54,892 - __main__ - INFO - Запуск бота...
+2026-11-07 17:17:21,249 - __main__ - ERROR - Критическая ошибка: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 55, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 43, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 17:17:21,320 - asyncio - ERROR - Unclosed client session
+client_session: <aiohttp.client.ClientSession object at 0x00000232594F65D0>
+2026-11-07 17:19:35,312 - __main__ - INFO - Запуск бота...
+2026-11-07 17:19:35,527 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 17:20:01,174 - __main__ - ERROR - Ошибка при запуске: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 17:20:01,425 - __main__ - ERROR - Критическая ошибка: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 65, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 51, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 17:21:05,874 - __main__ - INFO - Запуск бота...
+2026-11-07 17:21:05,887 - __main__ - ERROR - Критическая ошибка: BaseSession.__init__() got an unexpected keyword argument 'connector'
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 75, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 43, in main
+    session = AiohttpSession(connector=connector)
+              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 99, in __init__
+    super().__init__(**kwargs)
+TypeError: BaseSession.__init__() got an unexpected keyword argument 'connector'
+2026-11-07 17:22:29,543 - __main__ - INFO - Запуск бота...
+2026-11-07 17:22:29,762 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 17:22:38,936 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-07 17:22:38,936 - aiogram.dispatcher - INFO - Start polling
+2026-11-07 17:22:39,064 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-07 17:27:31,729 - aiogram.event - INFO - Update id=531995513 is not handled. Duration 15577 ms by bot id=9027309118
+2026-11-07 17:27:31,729 - aiogram.event - ERROR - Cause exception while process update id=531995513 by bot id=9027309118
+TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\middlewares\user_context.py", line 56, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\fsm\middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 174, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 146, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 141, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\router.py", line 166, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\dispatcher\event\handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\bot\handlers\video_handler.py", line 33, in cmd_start
+    await message.answer(welcome_text, parse_mode="HTML")
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 17:28:21,884 - __main__ - INFO - Запуск бота...
+2026-11-07 17:28:22,102 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 17:28:34,262 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-07 17:28:34,262 - aiogram.dispatcher - INFO - Start polling
+2026-11-07 17:28:34,360 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-07 17:28:34,489 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:34,489 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 17:28:38,682 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:38,683 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 17:28:40,121 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:40,121 - aiogram.dispatcher - WARNING - Sleep for 1.229131 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 17:28:44,824 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:44,824 - aiogram.dispatcher - WARNING - Sleep for 1.382363 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 17:28:46,315 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:46,315 - aiogram.dispatcher - WARNING - Sleep for 1.548612 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 17:28:51,355 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:51,355 - aiogram.dispatcher - WARNING - Sleep for 1.949297 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 17:28:53,416 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:53,417 - aiogram.dispatcher - WARNING - Sleep for 2.108782 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 17:28:59,093 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:28:59,093 - aiogram.dispatcher - WARNING - Sleep for 2.573465 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 17:29:01,761 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:01,761 - aiogram.dispatcher - WARNING - Sleep for 2.644269 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 17:29:07,509 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:07,509 - aiogram.dispatcher - WARNING - Sleep for 3.499505 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 17:29:11,122 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:11,122 - aiogram.dispatcher - WARNING - Sleep for 3.390814 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 17:29:14,634 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:14,634 - aiogram.dispatcher - WARNING - Sleep for 4.661536 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 17:29:19,414 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:19,414 - aiogram.dispatcher - WARNING - Sleep for 4.290660 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 17:29:23,809 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:23,809 - aiogram.dispatcher - WARNING - Sleep for 4.995905 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 17:29:28,218 - aiogram.dispatcher - INFO - Connection established (tryings = 7, bot id = 9027309118)
+2026-11-07 17:29:28,801 - aiogram.event - INFO - Update id=531995514 is handled. Duration 578 ms by bot id=9027309118
+2026-11-07 17:29:28,907 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:28,907 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 17:29:33,009 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:33,010 - aiogram.dispatcher - WARNING - Sleep for 5.055781 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 17:29:38,175 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:38,176 - aiogram.dispatcher - WARNING - Sleep for 1.383004 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 17:29:42,660 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:42,660 - aiogram.dispatcher - WARNING - Sleep for 4.976531 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 17:29:47,746 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:47,746 - aiogram.dispatcher - WARNING - Sleep for 1.887533 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 17:29:52,728 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:52,728 - aiogram.dispatcher - WARNING - Sleep for 5.042998 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 17:29:57,880 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:29:57,880 - aiogram.dispatcher - WARNING - Sleep for 2.396058 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 17:30:03,398 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:03,398 - aiogram.dispatcher - WARNING - Sleep for 4.950770 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-07 17:30:08,525 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:08,525 - aiogram.dispatcher - WARNING - Sleep for 3.203362 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 17:30:12,116 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:12,117 - aiogram.dispatcher - WARNING - Sleep for 4.877833 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-07 17:30:17,095 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:17,095 - aiogram.dispatcher - WARNING - Sleep for 4.425931 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 17:30:21,628 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:21,628 - aiogram.dispatcher - WARNING - Sleep for 4.996373 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-07 17:30:26,734 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:26,734 - aiogram.dispatcher - WARNING - Sleep for 5.114242 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 17:30:40,234 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:30:40,234 - aiogram.dispatcher - WARNING - Sleep for 4.943961 seconds and try again... (tryings = 13, bot id = 9027309118)
+2026-11-07 17:30:42,779 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-11-07 17:30:42,779 - aiogram.dispatcher - WARNING - Sleep for 4.989438 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 17:31:06,237 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:31:06,237 - aiogram.dispatcher - WARNING - Sleep for 4.807761 seconds and try again... (tryings = 14, bot id = 9027309118)
+2026-11-07 17:31:08,834 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:31:08,834 - aiogram.dispatcher - WARNING - Sleep for 5.062192 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 17:31:32,107 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:31:32,107 - aiogram.dispatcher - WARNING - Sleep for 5.136892 seconds and try again... (tryings = 15, bot id = 9027309118)
+2026-11-07 17:31:34,944 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:31:34,944 - aiogram.dispatcher - WARNING - Sleep for 5.019707 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 17:31:58,286 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:31:58,286 - aiogram.dispatcher - WARNING - Sleep for 5.055899 seconds and try again... (tryings = 16, bot id = 9027309118)
+2026-11-07 17:32:01,015 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:32:01,015 - aiogram.dispatcher - WARNING - Sleep for 4.989237 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-07 17:32:04,541 - aiogram.dispatcher - INFO - Connection established (tryings = 17, bot id = 9027309118)
+2026-11-07 17:32:05,030 - aiogram.event - INFO - Update id=531995516 is handled. Duration 500 ms by bot id=9027309118
+2026-11-07 17:32:05,347 - bot.handlers.video_handler - ERROR - Ошибка в handle_video: Telegram server says - Bad Request: file is too big
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\bot\handlers\video_handler.py", line 97, in handle_video
+    file = await message.bot.get_file(video.file_id)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1801, in get_file
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 189, in make_request
+    response = self.check_response(
+               ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 120, in check_response
+    raise TelegramBadRequest(method=method, message=description)
+aiogram.exceptions.TelegramBadRequest: Telegram server says - Bad Request: file is too big
+2026-11-07 17:32:05,529 - aiogram.event - INFO - Update id=531995515 is handled. Duration 1000 ms by bot id=9027309118
+2026-11-07 17:32:27,070 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:32:27,070 - aiogram.dispatcher - WARNING - Sleep for 4.990869 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-07 17:32:53,104 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:32:53,104 - aiogram.dispatcher - WARNING - Sleep for 4.852050 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-07 17:33:19,009 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:33:19,009 - aiogram.dispatcher - WARNING - Sleep for 4.881081 seconds and try again... (tryings = 13, bot id = 9027309118)
+2026-11-07 17:33:42,836 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 121] Превышен таймаут семафора
+2026-11-07 17:33:42,837 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 17:33:44,938 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:33:44,938 - aiogram.dispatcher - WARNING - Sleep for 4.970252 seconds and try again... (tryings = 14, bot id = 9027309118)
+2026-11-07 17:34:04,870 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:34:04,870 - aiogram.dispatcher - WARNING - Sleep for 1.270457 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 17:34:10,961 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:34:10,961 - aiogram.dispatcher - WARNING - Sleep for 5.018857 seconds and try again... (tryings = 15, bot id = 9027309118)
+2026-11-07 17:34:27,186 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 17:34:27,186 - aiogram.dispatcher - WARNING - Sleep for 1.608540 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 17:34:46,821 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 17:34:46,821 - aiogram.dispatcher - WARNING - Sleep for 1.997992 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 17:34:49,178 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:34:49,178 - aiogram.dispatcher - WARNING - Sleep for 4.928948 seconds and try again... (tryings = 16, bot id = 9027309118)
+2026-11-07 17:34:54,384 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:34:54,384 - aiogram.dispatcher - WARNING - Sleep for 2.577222 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 17:35:00,067 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:00,067 - aiogram.dispatcher - WARNING - Sleep for 5.058127 seconds and try again... (tryings = 17, bot id = 9027309118)
+2026-11-07 17:35:05,220 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:05,220 - aiogram.dispatcher - WARNING - Sleep for 3.400687 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 17:35:06,516 - aiogram.dispatcher - INFO - Connection established (tryings = 18, bot id = 9027309118)
+2026-11-07 17:35:09,128 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:09,128 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 17:35:13,550 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:13,550 - aiogram.dispatcher - WARNING - Sleep for 4.439682 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 17:35:17,083 - bot.services.video_processor - ERROR - Ошибка получения информации о видео: [WinError 2] Не удается найти указанный файл
+2026-11-07 17:35:17,233 - aiogram.event - INFO - Update id=531995517 is handled. Duration 10718 ms by bot id=9027309118
+2026-11-07 17:35:18,078 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:18,079 - aiogram.dispatcher - WARNING - Sleep for 1.325614 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 17:35:22,487 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:22,487 - aiogram.dispatcher - WARNING - Sleep for 4.952027 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 17:35:27,577 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:27,577 - aiogram.dispatcher - WARNING - Sleep for 1.763812 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 17:35:32,778 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:32,779 - aiogram.dispatcher - WARNING - Sleep for 5.121194 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 17:35:37,991 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:37,991 - aiogram.dispatcher - WARNING - Sleep for 2.509875 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 17:35:43,594 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:43,594 - aiogram.dispatcher - WARNING - Sleep for 4.884623 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 17:35:48,962 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:48,962 - aiogram.dispatcher - WARNING - Sleep for 3.346141 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 17:35:52,398 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:52,399 - aiogram.dispatcher - WARNING - Sleep for 5.181513 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-07 17:35:58,094 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:35:58,094 - aiogram.dispatcher - WARNING - Sleep for 4.121671 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 17:36:02,325 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:02,325 - aiogram.dispatcher - WARNING - Sleep for 4.947923 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-07 17:36:07,875 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:07,875 - aiogram.dispatcher - WARNING - Sleep for 4.919335 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 17:36:12,927 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:12,927 - aiogram.dispatcher - WARNING - Sleep for 4.962526 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-07 17:36:17,983 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:17,983 - aiogram.dispatcher - WARNING - Sleep for 4.962886 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 17:36:23,082 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:23,082 - aiogram.dispatcher - WARNING - Sleep for 4.864803 seconds and try again... (tryings = 13, bot id = 9027309118)
+2026-11-07 17:36:28,419 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:28,420 - aiogram.dispatcher - WARNING - Sleep for 5.027885 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 17:36:33,572 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:33,573 - aiogram.dispatcher - WARNING - Sleep for 4.820987 seconds and try again... (tryings = 14, bot id = 9027309118)
+2026-11-07 17:36:38,521 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:38,521 - aiogram.dispatcher - WARNING - Sleep for 4.930856 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 17:36:43,556 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:43,556 - aiogram.dispatcher - WARNING - Sleep for 4.826616 seconds and try again... (tryings = 15, bot id = 9027309118)
+2026-11-07 17:36:48,472 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:48,472 - aiogram.dispatcher - WARNING - Sleep for 5.020330 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-07 17:36:53,612 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:53,612 - aiogram.dispatcher - WARNING - Sleep for 4.955535 seconds and try again... (tryings = 16, bot id = 9027309118)
+2026-11-07 17:36:58,660 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:36:58,660 - aiogram.dispatcher - WARNING - Sleep for 4.946408 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-07 17:37:03,712 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:03,712 - aiogram.dispatcher - WARNING - Sleep for 4.967537 seconds and try again... (tryings = 17, bot id = 9027309118)
+2026-11-07 17:37:08,771 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:08,772 - aiogram.dispatcher - WARNING - Sleep for 4.944028 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-07 17:37:13,827 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:13,827 - aiogram.dispatcher - WARNING - Sleep for 4.918937 seconds and try again... (tryings = 18, bot id = 9027309118)
+2026-11-07 17:37:18,842 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:18,842 - aiogram.dispatcher - WARNING - Sleep for 5.101243 seconds and try again... (tryings = 13, bot id = 9027309118)
+2026-11-07 17:37:24,032 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:24,033 - aiogram.dispatcher - WARNING - Sleep for 5.015162 seconds and try again... (tryings = 19, bot id = 9027309118)
+2026-11-07 17:37:29,152 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:29,152 - aiogram.dispatcher - WARNING - Sleep for 5.036341 seconds and try again... (tryings = 14, bot id = 9027309118)
+2026-11-07 17:37:34,292 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:34,293 - aiogram.dispatcher - WARNING - Sleep for 5.081801 seconds and try again... (tryings = 20, bot id = 9027309118)
+2026-11-07 17:37:38,163 - aiogram.dispatcher - INFO - Connection established (tryings = 15, bot id = 9027309118)
+2026-11-07 17:37:39,468 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:39,468 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 17:37:43,560 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:43,560 - aiogram.dispatcher - WARNING - Sleep for 4.885145 seconds and try again... (tryings = 21, bot id = 9027309118)
+2026-11-07 17:37:48,531 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:48,531 - aiogram.dispatcher - WARNING - Sleep for 1.235804 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 17:37:52,777 - bot.handlers.video_handler - ERROR - Ошибка в handle_video: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\bot\handlers\video_handler.py", line 80, in handle_video
+    status_msg = await message.answer(
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 17:37:52,870 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:52,870 - aiogram.dispatcher - WARNING - Sleep for 4.799759 seconds and try again... (tryings = 22, bot id = 9027309118)
+2026-11-07 17:37:53,246 - aiogram.event - INFO - Update id=531995518 is handled. Duration 15093 ms by bot id=9027309118
+2026-11-07 17:37:57,770 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:37:57,770 - aiogram.dispatcher - WARNING - Sleep for 1.627795 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 17:38:02,508 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:02,508 - aiogram.dispatcher - WARNING - Sleep for 5.031506 seconds and try again... (tryings = 23, bot id = 9027309118)
+2026-11-07 17:38:07,642 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:07,642 - aiogram.dispatcher - WARNING - Sleep for 2.065485 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 17:38:12,800 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:12,801 - aiogram.dispatcher - WARNING - Sleep for 5.034625 seconds and try again... (tryings = 24, bot id = 9027309118)
+2026-11-07 17:38:17,929 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:17,929 - aiogram.dispatcher - WARNING - Sleep for 2.730527 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 17:38:23,751 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:23,752 - aiogram.dispatcher - WARNING - Sleep for 5.049208 seconds and try again... (tryings = 25, bot id = 9027309118)
+2026-11-07 17:38:28,893 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:28,893 - aiogram.dispatcher - WARNING - Sleep for 3.468639 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 17:38:32,497 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:32,497 - aiogram.dispatcher - WARNING - Sleep for 5.010577 seconds and try again... (tryings = 26, bot id = 9027309118)
+2026-11-07 17:38:37,597 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:37,597 - aiogram.dispatcher - WARNING - Sleep for 4.398865 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 17:38:42,090 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:42,090 - aiogram.dispatcher - WARNING - Sleep for 4.961261 seconds and try again... (tryings = 27, bot id = 9027309118)
+2026-11-07 17:38:47,151 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:47,151 - aiogram.dispatcher - WARNING - Sleep for 5.047664 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 17:38:52,295 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:52,295 - aiogram.dispatcher - WARNING - Sleep for 5.093847 seconds and try again... (tryings = 28, bot id = 9027309118)
+2026-11-07 17:38:57,506 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:38:57,506 - aiogram.dispatcher - WARNING - Sleep for 4.994812 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 17:39:02,584 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:02,584 - aiogram.dispatcher - WARNING - Sleep for 5.020580 seconds and try again... (tryings = 29, bot id = 9027309118)
+2026-11-07 17:39:07,711 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:07,711 - aiogram.dispatcher - WARNING - Sleep for 4.905346 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 17:39:12,704 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:12,704 - aiogram.dispatcher - WARNING - Sleep for 5.042289 seconds and try again... (tryings = 30, bot id = 9027309118)
+2026-11-07 17:39:17,863 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:17,863 - aiogram.dispatcher - WARNING - Sleep for 4.963532 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-07 17:39:23,915 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:23,915 - aiogram.dispatcher - WARNING - Sleep for 5.089646 seconds and try again... (tryings = 31, bot id = 9027309118)
+2026-11-07 17:39:29,103 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:29,103 - aiogram.dispatcher - WARNING - Sleep for 4.901686 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-07 17:39:34,101 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:34,101 - aiogram.dispatcher - WARNING - Sleep for 4.925980 seconds and try again... (tryings = 32, bot id = 9027309118)
+2026-11-07 17:39:39,492 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:39,493 - aiogram.dispatcher - WARNING - Sleep for 4.875678 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-07 17:39:44,455 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:44,455 - aiogram.dispatcher - WARNING - Sleep for 5.274142 seconds and try again... (tryings = 33, bot id = 9027309118)
+2026-11-07 17:39:49,817 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:49,818 - aiogram.dispatcher - WARNING - Sleep for 5.114888 seconds and try again... (tryings = 13, bot id = 9027309118)
+2026-11-07 17:39:55,096 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:39:55,097 - aiogram.dispatcher - WARNING - Sleep for 5.013998 seconds and try again... (tryings = 34, bot id = 9027309118)
+2026-11-07 17:40:00,204 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:00,204 - aiogram.dispatcher - WARNING - Sleep for 5.035332 seconds and try again... (tryings = 14, bot id = 9027309118)
+2026-11-07 17:40:05,335 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:05,336 - aiogram.dispatcher - WARNING - Sleep for 4.921840 seconds and try again... (tryings = 35, bot id = 9027309118)
+2026-11-07 17:40:10,363 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:10,363 - aiogram.dispatcher - WARNING - Sleep for 4.935992 seconds and try again... (tryings = 15, bot id = 9027309118)
+2026-11-07 17:40:15,399 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:15,400 - aiogram.dispatcher - WARNING - Sleep for 4.938966 seconds and try again... (tryings = 36, bot id = 9027309118)
+2026-11-07 17:40:20,442 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:20,442 - aiogram.dispatcher - WARNING - Sleep for 4.986520 seconds and try again... (tryings = 16, bot id = 9027309118)
+2026-11-07 17:40:25,522 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:25,523 - aiogram.dispatcher - WARNING - Sleep for 4.904137 seconds and try again... (tryings = 37, bot id = 9027309118)
+2026-11-07 17:40:30,523 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:30,523 - aiogram.dispatcher - WARNING - Sleep for 5.153918 seconds and try again... (tryings = 17, bot id = 9027309118)
+2026-11-07 17:40:35,768 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:35,768 - aiogram.dispatcher - WARNING - Sleep for 5.006314 seconds and try again... (tryings = 38, bot id = 9027309118)
+2026-11-07 17:40:40,863 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:40,865 - aiogram.dispatcher - WARNING - Sleep for 5.100744 seconds and try again... (tryings = 18, bot id = 9027309118)
+2026-11-07 17:40:46,078 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 17:40:46,078 - aiogram.dispatcher - WARNING - Sleep for 4.924946 seconds and try again... (tryings = 39, bot id = 9027309118)
+2026-11-07 17:43:40,350 - __main__ - INFO - Запуск бота...
+2026-11-07 17:43:40,615 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 17:43:52,524 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-07 17:43:52,525 - aiogram.dispatcher - INFO - Start polling
+2026-11-07 17:43:52,619 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-07 17:44:55,766 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261107_174451.mp4
+2026-11-07 17:44:55,803 - bot.services.video_processor - INFO - Параметры: шум=0.0199, скорость=1.0334, crop=3px
+2026-11-07 17:44:56,370 - bot.services.video_processor - ERROR - Ошибка при уникализации видео: ffmpeg error (see stderr output for detail)
+2026-11-07 17:44:56,542 - aiogram.event - INFO - Update id=531995519 is handled. Duration 5781 ms by bot id=9027309118
+2026-11-07 18:05:44,457 - __main__ - INFO - Запуск бота...
+2026-11-07 18:05:44,720 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 18:05:45,527 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-07 18:05:45,528 - aiogram.dispatcher - INFO - Start polling
+2026-11-07 18:05:45,609 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-07 18:07:20,842 - __main__ - INFO - Запуск бота...
+2026-11-07 18:07:21,097 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 18:07:21,451 - bot.handlers.video_handler - ERROR - Ошибка в handle_video: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\bot\handlers\video_handler.py", line 80, in handle_video
+    status_msg = await message.answer(
+                 ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 18:07:21,980 - aiogram.event - INFO - Update id=531995520 is handled. Duration 15202 ms by bot id=9027309118
+2026-11-07 18:07:32,995 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-07 18:07:32,996 - aiogram.dispatcher - INFO - Start polling
+2026-11-07 18:07:33,093 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-07 18:07:33,518 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:33,518 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 18:07:37,678 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:37,678 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 18:07:38,760 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:38,760 - aiogram.dispatcher - WARNING - Sleep for 1.182784 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 18:07:43,269 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:43,269 - aiogram.dispatcher - WARNING - Sleep for 1.336463 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 18:07:44,698 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:44,698 - aiogram.dispatcher - WARNING - Sleep for 1.446418 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 18:07:49,240 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:49,240 - aiogram.dispatcher - WARNING - Sleep for 1.766595 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 18:07:51,102 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:51,102 - aiogram.dispatcher - WARNING - Sleep for 1.906370 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 18:07:56,097 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:56,097 - aiogram.dispatcher - WARNING - Sleep for 2.495704 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 18:07:58,682 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:07:58,682 - aiogram.dispatcher - WARNING - Sleep for 2.470663 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 18:08:04,270 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:04,270 - aiogram.dispatcher - WARNING - Sleep for 3.349368 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 18:08:07,719 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:07,720 - aiogram.dispatcher - WARNING - Sleep for 3.250036 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 18:08:11,082 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:11,082 - aiogram.dispatcher - WARNING - Sleep for 4.243924 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 18:08:15,433 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:15,433 - aiogram.dispatcher - WARNING - Sleep for 4.113468 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 18:08:19,323 - aiogram.dispatcher - INFO - Connection established (tryings = 6, bot id = 9027309118)
+2026-11-07 18:08:19,630 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:19,630 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 18:08:22,490 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261107_180819.mp4
+2026-11-07 18:08:22,558 - bot.services.video_processor - INFO - Параметры: шум=0.0134, скорость=1.0255, crop=4px
+2026-11-07 18:08:22,581 - bot.services.video_processor - ERROR - Ошибка при уникализации видео: ffmpeg error (see stderr output for detail)
+2026-11-07 18:08:22,686 - aiogram.event - INFO - Update id=531995521 is handled. Duration 3375 ms by bot id=9027309118
+2026-11-07 18:08:23,728 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:23,729 - aiogram.dispatcher - WARNING - Sleep for 5.115205 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 18:08:28,941 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:28,941 - aiogram.dispatcher - WARNING - Sleep for 1.364628 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 18:08:33,411 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:33,411 - aiogram.dispatcher - WARNING - Sleep for 4.868007 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 18:08:39,502 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:39,502 - aiogram.dispatcher - WARNING - Sleep for 1.753098 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 18:08:44,674 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramConflictError: Telegram server says - Conflict: terminated by other getUpdates request; make sure that only one bot instance is running
+2026-11-07 18:08:44,675 - aiogram.dispatcher - WARNING - Sleep for 4.917287 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 18:09:19,680 - aiogram.dispatcher - INFO - Connection established (tryings = 10, bot id = 9027309118)
+2026-11-07 18:11:08,774 - __main__ - INFO - Запуск бота...
+2026-11-07 18:11:09,027 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 18:11:20,974 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-07 18:11:20,974 - aiogram.dispatcher - INFO - Start polling
+2026-11-07 18:11:21,064 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-07 18:11:59,615 - __main__ - INFO - Запуск бота...
+2026-11-07 18:11:59,872 - __main__ - INFO - Подключение к Telegram API...
+2026-11-07 18:12:14,566 - __main__ - ERROR - Ошибка при запуске: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 18:12:14,821 - __main__ - ERROR - Критическая ошибка: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 78, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 63, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 18:14:02,594 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261107_181351.mp4
+2026-11-07 18:14:02,673 - bot.services.video_processor - INFO - Параметры: шум=0.0134, скорость=0.9682, crop=4px
+2026-11-07 18:14:02,701 - bot.services.video_processor - ERROR - Ошибка при уникализации видео: ffmpeg error (see stderr output for detail)
+2026-11-07 18:14:02,825 - aiogram.event - INFO - Update id=531995522 is handled. Duration 11421 ms by bot id=9027309118
+2026-11-07 18:19:14,629 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-11-07 18:19:14,629 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 18:19:36,693 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:19:36,693 - aiogram.dispatcher - WARNING - Sleep for 1.236172 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 18:19:52,538 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 18:19:52,538 - aiogram.dispatcher - WARNING - Sleep for 1.600350 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 18:20:09,707 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-07 18:20:09,707 - aiogram.dispatcher - WARNING - Sleep for 2.211874 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 18:20:42,651 - aiogram.dispatcher - INFO - Connection established (tryings = 4, bot id = 9027309118)
+2026-11-07 18:43:29,640 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 121] Превышен таймаут семафора
+2026-11-07 18:43:29,641 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-07 18:43:51,658 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:43:51,658 - aiogram.dispatcher - WARNING - Sleep for 1.312560 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-07 18:44:12,994 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Подключение к сети было разорвано локальной системой]
+2026-11-07 18:44:12,994 - aiogram.dispatcher - WARNING - Sleep for 1.753951 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-07 18:44:35,796 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:44:35,796 - aiogram.dispatcher - WARNING - Sleep for 2.304568 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-07 18:44:59,136 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:44:59,136 - aiogram.dispatcher - WARNING - Sleep for 3.033259 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-07 18:45:23,201 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:45:23,201 - aiogram.dispatcher - WARNING - Sleep for 4.135904 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-07 18:45:38,170 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Подключение к сети было разорвано локальной системой]
+2026-11-07 18:45:38,170 - aiogram.dispatcher - WARNING - Sleep for 4.869429 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-07 18:46:04,076 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:46:04,076 - aiogram.dispatcher - WARNING - Sleep for 4.921632 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-07 18:46:30,022 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:46:30,022 - aiogram.dispatcher - WARNING - Sleep for 4.981413 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-07 18:46:56,061 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:46:56,061 - aiogram.dispatcher - WARNING - Sleep for 4.963849 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-07 18:47:22,065 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:47:22,065 - aiogram.dispatcher - WARNING - Sleep for 5.139388 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-07 18:47:48,256 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:47:48,256 - aiogram.dispatcher - WARNING - Sleep for 4.970356 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-07 18:48:14,277 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:48:14,277 - aiogram.dispatcher - WARNING - Sleep for 4.984421 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-07 18:48:40,327 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:48:40,327 - aiogram.dispatcher - WARNING - Sleep for 4.984846 seconds and try again... (tryings = 13, bot id = 9027309118)
+2026-11-07 18:49:06,357 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:49:06,357 - aiogram.dispatcher - WARNING - Sleep for 5.066334 seconds and try again... (tryings = 14, bot id = 9027309118)
+2026-11-07 18:49:32,481 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:49:32,481 - aiogram.dispatcher - WARNING - Sleep for 5.089709 seconds and try again... (tryings = 15, bot id = 9027309118)
+2026-11-07 18:49:58,624 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:49:58,624 - aiogram.dispatcher - WARNING - Sleep for 5.315167 seconds and try again... (tryings = 16, bot id = 9027309118)
+2026-11-07 18:50:24,980 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:50:24,980 - aiogram.dispatcher - WARNING - Sleep for 5.021134 seconds and try again... (tryings = 17, bot id = 9027309118)
+2026-11-07 18:50:51,052 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:50:51,052 - aiogram.dispatcher - WARNING - Sleep for 4.875264 seconds and try again... (tryings = 18, bot id = 9027309118)
+2026-11-07 18:51:16,959 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:51:16,959 - aiogram.dispatcher - WARNING - Sleep for 5.091469 seconds and try again... (tryings = 19, bot id = 9027309118)
+2026-11-07 18:51:43,090 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:51:43,090 - aiogram.dispatcher - WARNING - Sleep for 5.106462 seconds and try again... (tryings = 20, bot id = 9027309118)
+2026-11-07 18:52:09,230 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:52:09,230 - aiogram.dispatcher - WARNING - Sleep for 4.934183 seconds and try again... (tryings = 21, bot id = 9027309118)
+2026-11-07 18:52:35,223 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:52:35,223 - aiogram.dispatcher - WARNING - Sleep for 5.122653 seconds and try again... (tryings = 22, bot id = 9027309118)
+2026-11-07 18:53:01,392 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:53:01,392 - aiogram.dispatcher - WARNING - Sleep for 4.914295 seconds and try again... (tryings = 23, bot id = 9027309118)
+2026-11-07 18:53:27,359 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:53:27,359 - aiogram.dispatcher - WARNING - Sleep for 4.847427 seconds and try again... (tryings = 24, bot id = 9027309118)
+2026-11-07 18:53:53,248 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:53:53,248 - aiogram.dispatcher - WARNING - Sleep for 5.111998 seconds and try again... (tryings = 25, bot id = 9027309118)
+2026-11-07 18:54:19,391 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:54:19,391 - aiogram.dispatcher - WARNING - Sleep for 4.797448 seconds and try again... (tryings = 26, bot id = 9027309118)
+2026-11-07 18:54:45,231 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:54:45,231 - aiogram.dispatcher - WARNING - Sleep for 4.912041 seconds and try again... (tryings = 27, bot id = 9027309118)
+2026-11-07 18:55:11,183 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:55:11,183 - aiogram.dispatcher - WARNING - Sleep for 5.143005 seconds and try again... (tryings = 28, bot id = 9027309118)
+2026-11-07 18:55:37,394 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:55:37,394 - aiogram.dispatcher - WARNING - Sleep for 4.856209 seconds and try again... (tryings = 29, bot id = 9027309118)
+2026-11-07 18:56:03,289 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:56:03,289 - aiogram.dispatcher - WARNING - Sleep for 4.973012 seconds and try again... (tryings = 30, bot id = 9027309118)
+2026-11-07 18:56:29,307 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:56:29,307 - aiogram.dispatcher - WARNING - Sleep for 4.939377 seconds and try again... (tryings = 31, bot id = 9027309118)
+2026-11-07 18:56:55,307 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:56:55,307 - aiogram.dispatcher - WARNING - Sleep for 4.981079 seconds and try again... (tryings = 32, bot id = 9027309118)
+2026-11-07 18:57:21,345 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:57:21,345 - aiogram.dispatcher - WARNING - Sleep for 4.951227 seconds and try again... (tryings = 33, bot id = 9027309118)
+2026-11-07 18:57:47,341 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:57:47,341 - aiogram.dispatcher - WARNING - Sleep for 4.933180 seconds and try again... (tryings = 34, bot id = 9027309118)
+2026-11-07 18:58:13,314 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:58:13,314 - aiogram.dispatcher - WARNING - Sleep for 5.112360 seconds and try again... (tryings = 35, bot id = 9027309118)
+2026-11-07 18:58:39,483 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:58:39,483 - aiogram.dispatcher - WARNING - Sleep for 4.953142 seconds and try again... (tryings = 36, bot id = 9027309118)
+2026-11-07 18:59:05,508 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:59:05,508 - aiogram.dispatcher - WARNING - Sleep for 4.925921 seconds and try again... (tryings = 37, bot id = 9027309118)
+2026-11-07 18:59:31,500 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:59:31,500 - aiogram.dispatcher - WARNING - Sleep for 4.962491 seconds and try again... (tryings = 38, bot id = 9027309118)
+2026-11-07 18:59:57,502 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 18:59:57,502 - aiogram.dispatcher - WARNING - Sleep for 5.017792 seconds and try again... (tryings = 39, bot id = 9027309118)
+2026-11-07 19:00:23,555 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:00:23,555 - aiogram.dispatcher - WARNING - Sleep for 4.796697 seconds and try again... (tryings = 40, bot id = 9027309118)
+2026-11-07 19:00:49,389 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:00:49,389 - aiogram.dispatcher - WARNING - Sleep for 5.104703 seconds and try again... (tryings = 41, bot id = 9027309118)
+2026-11-07 19:01:15,548 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:01:15,548 - aiogram.dispatcher - WARNING - Sleep for 4.935080 seconds and try again... (tryings = 42, bot id = 9027309118)
+2026-11-07 19:01:41,534 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:01:41,534 - aiogram.dispatcher - WARNING - Sleep for 5.050186 seconds and try again... (tryings = 43, bot id = 9027309118)
+2026-11-07 19:02:07,629 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:02:07,629 - aiogram.dispatcher - WARNING - Sleep for 4.955825 seconds and try again... (tryings = 44, bot id = 9027309118)
+2026-11-07 19:02:33,639 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:02:33,639 - aiogram.dispatcher - WARNING - Sleep for 4.947526 seconds and try again... (tryings = 45, bot id = 9027309118)
+2026-11-07 19:02:59,628 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:02:59,628 - aiogram.dispatcher - WARNING - Sleep for 4.943203 seconds and try again... (tryings = 46, bot id = 9027309118)
+2026-11-07 19:03:25,615 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:03:25,615 - aiogram.dispatcher - WARNING - Sleep for 4.728553 seconds and try again... (tryings = 47, bot id = 9027309118)
+2026-11-07 19:03:51,382 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:03:51,382 - aiogram.dispatcher - WARNING - Sleep for 4.998583 seconds and try again... (tryings = 48, bot id = 9027309118)
+2026-11-07 19:04:17,434 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:04:17,434 - aiogram.dispatcher - WARNING - Sleep for 5.020780 seconds and try again... (tryings = 49, bot id = 9027309118)
+2026-11-07 19:04:43,492 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:04:43,492 - aiogram.dispatcher - WARNING - Sleep for 5.011528 seconds and try again... (tryings = 50, bot id = 9027309118)
+2026-11-07 19:05:09,536 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:05:09,536 - aiogram.dispatcher - WARNING - Sleep for 4.890459 seconds and try again... (tryings = 51, bot id = 9027309118)
+2026-11-07 19:05:35,456 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:05:35,456 - aiogram.dispatcher - WARNING - Sleep for 4.819460 seconds and try again... (tryings = 52, bot id = 9027309118)
+2026-11-07 19:06:01,311 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-07 19:06:01,311 - aiogram.dispatcher - WARNING - Sleep for 5.019561 seconds and try again... (tryings = 53, bot id = 9027309118)
+2026-11-07 19:06:45,406 - aiogram.dispatcher - INFO - Connection established (tryings = 54, bot id = 9027309118)
+2026-11-08 12:07:16,613 - __main__ - INFO - Запуск бота...
+2026-11-08 12:07:16,842 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:07:38,187 - __main__ - ERROR - Ошибка при запуске: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:07:38,449 - __main__ - ERROR - Критическая ошибка: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1109, in _wrap_create_connection
+    sock = await aiohappyeyeballs.start_connection(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohappyeyeballs\impl.py", line 124, in start_connection
+    raise first_exception
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohappyeyeballs\impl.py", line 75, in start_connection
+    sock = await _connect_sock(
+           ^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohappyeyeballs\impl.py", line 210, in _connect_sock
+    await loop.sock_connect(sock, address)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\proactor_events.py", line 726, in sock_connect
+    return await self._proactor.connect(sock, address)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 854, in _poll
+    value = callback(transferred, key, ov)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\windows_events.py", line 641, in finish_connect
+    ov.getresult()
+OSError: [WinError 121] Превышен таймаут семафора
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 78, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 63, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:11:36,447 - __main__ - INFO - Запуск бота...
+2026-11-08 12:11:36,664 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:11:49,404 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-08 12:11:49,404 - aiogram.dispatcher - INFO - Start polling
+2026-11-08 12:11:49,488 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-08 12:12:32,069 - aiogram.event - INFO - Update id=531995526 is handled. Duration 452 ms by bot id=9027309118
+2026-11-08 12:12:45,574 - aiogram.event - INFO - Update id=531995527 is handled. Duration 125 ms by bot id=9027309118
+2026-11-08 12:13:20,214 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261108_121315.mp4
+2026-11-08 12:13:20,281 - bot.services.video_processor - INFO - Параметры: шум=0.0187, скорость=0.9786, crop=3px
+2026-11-08 12:13:20,905 - bot.services.video_processor - ERROR - FFmpeg ошибка: ffmpeg version N-128560-g967f0ffb10-20261107 Copyright (c) 2000-2026 the FFmpeg developers
+  built with gcc 16.2.0 (crosstool-NG 1.29.0.7_b1a94f6)
+  configuration: --prefix=/ffbuild/prefix --pkg-config-flags=--static --pkg-config=pkg-config --cross-prefix=x86_64-w64-mingw32- --arch=x86_64 --target-os=mingw32 --enable-gpl --enable-version3 --disable-debug --disable-w32threads --enable-pthreads --enable-iconv --enable-zlib --enable-libxml2 --enable-libvmaf --disable-libxcb --disable-xlib --enable-fontconfig --enable-libharfbuzz --enable-libfreetype --enable-libfribidi --enable-lcms2 --enable-vulkan --enable-libdav1d --enable-libvorbis --enable-librav1e --enable-librsvg --disable-libpulse --enable-gmp --enable-lzma --enable-liblcevc-dec --enable-opencl --enable-amf --enable-libaom --enable-avisynth --enable-chromaprint --enable-libdavs2 --enable-libdvdread --enable-libdvdnav --disable-libfdk-aac --enable-ffnvcodec --enable-cuda-llvm --enable-frei0r --enable-libgme --enable-libkvazaar --enable-libaribb24 --enable-libaribcaption --enable-libass --enable-libbluray --enable-libcurl --enable-libjxl --enable-libmp3lame --enable-libopus --enable-libplacebo --enable-librist --enable-libssh --enable-libtheora --enable-libvpx --enable-libwebp --enable-libzmq --enable-lv2 --enable-libvpl --enable-openal --enable-liboapv --enable-libopencore-amrnb --enable-libopencore-amrwb --enable-libopenh264 --enable-libopenjpeg --enable-libopenmpt --enable-librubberband --enable-schannel --enable-sdl2 --enable-libsnappy --enable-libsoxr --enable-libsrt --enable-libsvtav1 --enable-libtwolame --enable-libuavs3d --disable-libdrm --enable-vaapi --enable-vapoursynth --enable-libvidstab --enable-libvvenc --disable-whisper --enable-libx264 --enable-libx265 --enable-libxavs2 --enable-libxvid --enable-libzimg --enable-libzvbi --extra-cflags=-DLIBTWOLAME_STATIC --extra-cxxflags= --extra-libs=-lgomp --extra-ldflags=-pthread --extra-ldexeflags= --cc=x86_64-w64-mingw32-gcc --cxx=x86_64-w64-mingw32-g++ --ar=x86_64-w64-mingw32-gcc-ar --ranlib=x86_64-w64-mingw32-gcc-ranlib --nm=x86_64-w64-mingw32-gcc-nm --extra-version=20261107
+  libavutil      61. 20.100 / 61. 20.100
+  libavcodec     63. 26.101 / 63. 26.101
+  libavformat    63. 18.100 / 63. 18.100
+  libavdevice    63.  6.100 / 63.  6.100
+  libavfilter    12. 12.100 / 12. 12.100
+  libswscale     10.  6.100 / 10.  6.100
+  libswresample   7.  7.100 /  7.  7.100
+[AVFilterGraph @ 0000021c6bf755c0] No option name near '1066\:1898\:3\:3,scale\=1072\:1904\:flags\=lanczos,noise\=alls\=1\:allf\=t+u,hue\=h\=8.728723683002828\:s\=0.992873421749048,eq\=brightness\=-0.007171249728473281,setpts\=1.0218953641398614*PTS,fps\=fps\=1001/1000'
+[AVFilterGraph @ 0000021c6bf755c0] Error parsing a filter description around: [s0];[0:a]asetrate\\=44100*0.9953530967493132\,aresample\\=44100\,atempo\\=0.9785737709473895\,adelay\\=37|37[s1]
+[AVFilterGraph @ 0000021c6bf755c0] Error parsing filterchain '[0:v]crop\\=1066\\:1898\\:3\\:3\,scale\\=1072\\:1904\\:flags\\=lanczos\,noise\\=alls\\=1\\:allf\\=t+u\,hue\\=h\\=8.728723683002828\\:s\\=0.992873421749048\,eq\\=brightness\\=-0.007171249728473281\,setpts\\=1.0218953641398614*PTS\,fps\\=fps\\=1001/1000[s0];[0:a]asetrate\\=44100*0.9953530967493132\,aresample\\=44100\,atempo\\=0.9785737709473895\,adelay\\=37|37[s1]' around: [s0];[0:a]asetrate\\=44100*0.9953530967493132\,aresample\\=44100\,atempo\\=0.9785737709473895\,adelay\\=37|37[s1]
+Error : Invalid argument
+
+2026-11-08 12:13:21,025 - aiogram.event - INFO - Update id=531995528 is handled. Duration 5812 ms by bot id=9027309118
+2026-11-08 12:13:29,173 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-11-08 12:13:29,174 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
+2026-11-08 12:13:51,216 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:13:51,216 - aiogram.dispatcher - WARNING - Sleep for 1.187720 seconds and try again... (tryings = 1, bot id = 9027309118)
+2026-11-08 12:14:13,443 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:14:13,443 - aiogram.dispatcher - WARNING - Sleep for 1.555848 seconds and try again... (tryings = 2, bot id = 9027309118)
+2026-11-08 12:14:36,056 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:14:36,056 - aiogram.dispatcher - WARNING - Sleep for 1.956665 seconds and try again... (tryings = 3, bot id = 9027309118)
+2026-11-08 12:14:59,063 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:14:59,063 - aiogram.dispatcher - WARNING - Sleep for 2.535658 seconds and try again... (tryings = 4, bot id = 9027309118)
+2026-11-08 12:15:22,644 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:15:22,645 - aiogram.dispatcher - WARNING - Sleep for 3.288778 seconds and try again... (tryings = 5, bot id = 9027309118)
+2026-11-08 12:15:46,981 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:15:46,981 - aiogram.dispatcher - WARNING - Sleep for 4.286318 seconds and try again... (tryings = 6, bot id = 9027309118)
+2026-11-08 12:16:12,296 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:16:12,296 - aiogram.dispatcher - WARNING - Sleep for 4.895969 seconds and try again... (tryings = 7, bot id = 9027309118)
+2026-11-08 12:16:38,249 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:16:38,250 - aiogram.dispatcher - WARNING - Sleep for 5.150070 seconds and try again... (tryings = 8, bot id = 9027309118)
+2026-11-08 12:17:04,466 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:17:04,466 - aiogram.dispatcher - WARNING - Sleep for 4.869017 seconds and try again... (tryings = 9, bot id = 9027309118)
+2026-11-08 12:17:30,392 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:17:30,392 - aiogram.dispatcher - WARNING - Sleep for 5.098343 seconds and try again... (tryings = 10, bot id = 9027309118)
+2026-11-08 12:17:56,511 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Превышен таймаут семафора]
+2026-11-08 12:17:56,511 - aiogram.dispatcher - WARNING - Sleep for 4.917698 seconds and try again... (tryings = 11, bot id = 9027309118)
+2026-11-08 12:18:01,444 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [Сетевая папка недоступна. За информацией о разрешении проблем в сети обратитесь к справочной системе Windows]
+2026-11-08 12:18:01,445 - aiogram.dispatcher - WARNING - Sleep for 5.118588 seconds and try again... (tryings = 12, bot id = 9027309118)
+2026-11-08 12:18:16,123 - __main__ - INFO - Запуск бота...
+2026-11-08 12:18:16,350 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:18:25,363 - __main__ - INFO - Запуск бота...
+2026-11-08 12:18:25,618 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:18:43,105 - __main__ - ERROR - Ошибка при запуске: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-08 12:18:43,370 - __main__ - ERROR - Критическая ошибка: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 78, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 63, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-08 12:19:09,199 - __main__ - INFO - Запуск бота...
+2026-11-08 12:19:09,429 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:19:24,314 - __main__ - ERROR - Ошибка при запуске: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-08 12:19:24,567 - __main__ - ERROR - Критическая ошибка: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 78, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 63, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-08 12:20:00,916 - __main__ - INFO - Запуск бота...
+2026-11-08 12:20:01,134 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:21:02,267 - __main__ - ERROR - Ошибка при запуске: HTTP Client says - Request timeout error
+2026-11-08 12:21:02,531 - __main__ - ERROR - Критическая ошибка: HTTP Client says - Request timeout error
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client_reqrep.py", line 1059, in start
+    message, payload = await protocol.read()  # type: ignore[union-attr]
+                       ^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\streams.py", line 644, in read
+    await self._waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 690, in _request
+    await resp.start(conn)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client_reqrep.py", line 1054, in start
+    with self._timer:
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\helpers.py", line 749, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\main.py", line 78, in <module>
+    asyncio.run(main())
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 190, in run
+    return runner.run(main)
+           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\runners.py", line 118, in run
+    return self._loop.run_until_complete(task)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 654, in run_until_complete
+    return future.result()
+           ^^^^^^^^^^^^^^^
+  File "E:\Work\video-uniqualizer-bot\main.py", line 63, in main
+    await bot.delete_webhook(drop_pending_updates=True)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 1300, in delete_webhook
+    return await self(call, request_timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 186, in make_request
+    raise TelegramNetworkError(method=method, message="Request timeout error")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - Request timeout error
+2026-11-08 12:24:46,520 - __main__ - INFO - Запуск бота...
+2026-11-08 12:24:46,733 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:24:59,535 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-08 12:24:59,536 - aiogram.dispatcher - INFO - Start polling
+2026-11-08 12:24:59,638 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-08 12:25:10,371 - aiogram.event - INFO - Update id=531995530 is handled. Duration 500 ms by bot id=9027309118
+2026-11-08 12:25:52,712 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261108_122544.mp4
+2026-11-08 12:25:52,773 - bot.services.video_processor - INFO - Параметры: шум=0.0126, скорость=0.9765, crop=4px
+2026-11-08 12:25:54,126 - bot.services.video_processor - INFO - Уникализация завершена: E:\Work\video-uniqualizer-bot\data\processed\output_915635417_20261108_122544.mp4
+2026-11-08 12:26:11,738 - bot.handlers.video_handler - INFO - Успешно обработано видео от пользователя 915635417
+2026-11-08 12:26:11,738 - aiogram.event - INFO - Update id=531995531 is handled. Duration 28047 ms by bot id=9027309118
+2026-11-08 12:29:09,362 - __main__ - INFO - Запуск бота...
+2026-11-08 12:29:09,579 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:29:22,368 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-08 12:29:22,368 - aiogram.dispatcher - INFO - Start polling
+2026-11-08 12:29:22,505 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-08 12:30:58,262 - bot.handlers.video_handler - ERROR - Ошибка в handle_video: 
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\streams.py", line 316, in _wait
+    await waiter
+asyncio.exceptions.CancelledError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\bot\handlers\video_handler.py", line 98, in handle_video
+    await message.bot.download_file(file.file_path, input_path)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 436, in download_file
+    await self.__download_file(destination=destination, stream=stream)
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 385, in __download_file
+    async for chunk in stream:
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 210, in stream_content
+    async for chunk in resp.content.iter_chunked(chunk_size):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\streams.py", line 50, in __anext__
+    rv = await self.read_func()
+         ^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\streams.py", line 397, in read
+    await self._wait("read")
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\streams.py", line 315, in _wait
+    with self._timer:
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\helpers.py", line 749, in __exit__
+    raise asyncio.TimeoutError from exc_val
+TimeoutError
+2026-11-08 12:31:04,709 - aiogram.event - INFO - Update id=531995532 is handled. Duration 54156 ms by bot id=9027309118
+2026-11-08 12:31:31,984 - __main__ - INFO - Запуск бота...
+2026-11-08 12:31:32,203 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:31:58,994 - __main__ - WARNING - Попытка 1/20 не удалась (HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]); жду 5 секунд и пробую снова...
+2026-11-08 12:32:04,464 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-08 12:32:04,464 - aiogram.dispatcher - INFO - Start polling
+2026-11-08 12:32:04,548 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-08 12:32:11,247 - aiogram.event - INFO - Update id=531995533 is handled. Duration 453 ms by bot id=9027309118
+2026-11-08 12:32:19,560 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261108_123217.mp4
+2026-11-08 12:32:19,592 - bot.services.video_processor - INFO - Параметры: шум=0.0200, скорость=0.9704, crop=3px, fps=60.00->60.06
+2026-11-08 12:32:42,813 - bot.services.video_processor - INFO - Уникализация завершена: E:\Work\video-uniqualizer-bot\data\processed\output_915635417_20261108_123217.mp4
+2026-11-08 12:32:57,356 - bot.handlers.video_handler - ERROR - Ошибка в handle_video: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1116, in _wrap_create_connection
+    return await self._loop.create_connection(*args, **kwargs, sock=sock)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1113, in create_connection
+    transport, protocol = await self._create_connection_transport(
+                          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\base_events.py", line 1146, in _create_connection_transport
+    await waiter
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\asyncio\sslproto.py", line 578, in _on_handshake_complete
+    raise handshake_exc
+ConnectionResetError
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 181, in make_request
+    async with session.post(
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 1360, in __aenter__
+    self._resp: _RetType = await self._coro
+                           ^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\client.py", line 663, in _request
+    conn = await self._connector.connect(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 538, in connect
+    proto = await self._create_connection(req, traces, timeout)
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1050, in _create_connection
+    _, proto = await self._create_direct_connection(req, traces, timeout)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1384, in _create_direct_connection
+    raise last_exc
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1353, in _create_direct_connection
+    transp, proto = await self._wrap_create_connection(
+                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiohttp\connector.py", line 1124, in _wrap_create_connection
+    raise client_error(req.connection_key, exc) from exc
+aiohttp.client_exceptions.ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "E:\Work\video-uniqualizer-bot\bot\handlers\video_handler.py", line 140, in handle_video
+    await status_msg.edit_text("📤 <b>Отправляю результат...</b>", parse_mode="HTML")
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\methods\base.py", line 84, in emit
+    return await bot(self)
+           ^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\bot.py", line 494, in __call__
+    return await self.session(self, method, timeout=request_timeout)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\base.py", line 254, in __call__
+    return cast(TelegramType, await middleware(bot, method))
+                              ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\schor\AppData\Local\Programs\Python\Python311\Lib\site-packages\aiogram\client\session\aiohttp.py", line 188, in make_request
+    raise TelegramNetworkError(method=method, message=f"{type(e).__name__}: {e}")
+aiogram.exceptions.TelegramNetworkError: HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-08 12:32:57,825 - aiogram.event - INFO - Update id=531995534 is handled. Duration 40484 ms by bot id=9027309118
+2026-11-08 12:33:34,363 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261108_123332.mp4
+2026-11-08 12:33:34,428 - bot.services.video_processor - INFO - Параметры: шум=0.0119, скорость=1.0317, crop=2px, fps=60.00->59.94
+2026-11-08 12:33:46,683 - bot.services.video_processor - INFO - Уникализация завершена: E:\Work\video-uniqualizer-bot\data\processed\output_915635417_20261108_123332.mp4
+2026-11-08 12:33:48,759 - bot.handlers.video_handler - INFO - Успешно обработано видео от пользователя 915635417
+2026-11-08 12:33:48,759 - aiogram.event - INFO - Update id=531995535 is handled. Duration 17079 ms by bot id=9027309118
+2026-11-08 12:41:21,076 - __main__ - INFO - Запуск бота...
+2026-11-08 12:41:21,308 - __main__ - INFO - Подключение к Telegram API...
+2026-11-08 12:41:48,054 - __main__ - WARNING - Попытка 1/20 не удалась (HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]); жду 5 секунд и пробую снова...
+2026-11-08 12:41:56,511 - __main__ - INFO - Бот успешно запущен и готов к работе!
+2026-11-08 12:41:56,511 - aiogram.dispatcher - INFO - Start polling
+2026-11-08 12:41:56,597 - aiogram.dispatcher - INFO - Run polling for bot @UnikallizatorVideobot id=9027309118 - 'video'
+2026-11-08 12:43:18,832 - aiogram.event - INFO - Update id=531995536 is handled. Duration 532 ms by bot id=9027309118
+2026-11-08 12:43:26,386 - bot.services.video_processor - INFO - Начинаем уникализацию: E:\Work\video-uniqualizer-bot\data\temp\input_915635417_20261108_124324.mp4
+2026-11-08 12:43:26,416 - bot.services.video_processor - INFO - Параметры: шум=0.0109, скорость=1.0230, crop=3px, fps=60.00->59.94
+2026-11-08 12:43:49,555 - bot.services.video_processor - INFO - Уникализация завершена: E:\Work\video-uniqualizer-bot\data\processed\output_915635417_20261108_124324.mp4
+2026-11-08 12:44:03,978 - bot.handlers.video_handler - WARNING - Не удалось обновить статус (сеть мигнула): HTTP Client says - ClientConnectorError: Cannot connect to host api.telegram.org:443 ssl:default [None]
+2026-11-08 12:44:06,596 - bot.handlers.video_handler - INFO - Успешно обработано видео от пользователя 915635417
+2026-11-08 12:44:06,596 - aiogram.event - INFO - Update id=531995537 is handled. Duration 42467 ms by bot id=9027309118
+2026-11-08 12:45:00,592 - aiogram.dispatcher - ERROR - Failed to fetch updates - TelegramNetworkError: HTTP Client says - ClientOSError: [WinError 1236] Подключение к сети было разорвано локальной системой
+2026-11-08 12:45:00,593 - aiogram.dispatcher - WARNING - Sleep for 1.000000 seconds and try again... (tryings = 0, bot id = 9027309118)
